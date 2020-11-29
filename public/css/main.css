@@ -1,0 +1,37 @@
+:root {
+    --one: #4C5760;
+    --two: #93A8AC;
+    --three: #D7CEB2;
+    --four: #A59E8C;
+    --five: #66635B;
+}
+
+
+.title {
+    color: var(--one);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    text-align: center;
+    margin: 10%;
+}
+
+body {
+    background-color: var(--three);
+}
+
+ul {
+    list-style: none;
+    overflow: hidden;
+}
+
+.nav li {
+    float: left;
+}
+
+.nav li a {
+    display: block;
+    text-decoration: none;;
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+}
