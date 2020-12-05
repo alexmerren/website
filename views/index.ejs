@@ -2,18 +2,32 @@
 <html>
     <head>
         <title>Alex Merren</title>
-        <link type="text/css" rel="stylesheet" href="/css/main.css" >
+        <link type="text/css" rel="stylesheet" href="/css/main.css" />
+        <link rel="shortcut icon" href="#" />
+        <script src="/js/scripts.js"></script>
     </head>
     <body>
         <div class="nav">
             <ul>
-                <li><a href="/projects">Projects</a></li>
-                <li><a href="/about">About</a></li>
-                <li><a href="/contact">Contact</a></li>
+                <li><button id="projectToggle" onclick="showPane('project')">Projects</button></li>
+                <li><button id="aboutToggle" onclick="showPane('about')">About</button></li>
+                <li><button id="contactToggle" onclick="showPane('contact')">Contact</button></li>
             </ul>
         </div>
         <div class="title">
-            <h1>Alex Merren</h1>
+            <h1><a href="/">Alex Merren</a></h1>
         </div>
+        <div class="content" id="projectDiv">
+            <p>Projects section</p>
+        </div>
+        <div class="content" id="aboutDiv">
+            <p>About section</p>
+        </div>
+        <div class="content" id="contactDiv">
+            <p>Contact section</p>
+        </div>
+        <footer class="footer">
+            <p>Image by <a href="http://www.matthieuvenot.fr/" >Matthieu Venot</a></p>
+        </footer>
     </body>
 </html>
