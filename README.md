@@ -17,12 +17,6 @@ $ npm install
 $ ./run
 ```
 
-If this does not work, you can type:
-
-```bash
-$ npm start
-```
-
 this will start the server.
 
 ## Usage
