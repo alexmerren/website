@@ -10,9 +10,10 @@ First, clone the repository with:
 $ git clone https://github.com/alexmerren/personal-website.git
 ```
 
-Then, to start the server, run this command in the terminal:
+Then, to start the server, run these commands in succession:
 
 ```bash
+$ npm install
 $ ./run
 ```
 
@@ -31,10 +32,3 @@ To visit the server, go to:
 ```
 localhost:8080
 ```
-
-or
-
-```
-127.0.0.1:8080
-```
-
