@@ -1,40 +1,30 @@
-var divCurrentlyOpen = false;
+var currentlyOpen = false;
 var lastOpenDiv;
 
 function showPane(name) {
-    if (!divCurrentlyOpen) {
-        // If there is nothing up, go into normal opening and closing.
-        var elementName = name + 'Div';
-        var element = document.getElementById(elementName);
 
-        if (element.style.height == '50vh') {
-            element.style.height = '0vh';
-            element.style.display = '';
-        } else {
-            element.style.height = '50vh';
-            element.style.display = 'block';
-            lastOpenDiv = name;
-            divCurrentlyOpen = true;
-        }
-    } else {
-        // If there is something else open, go through all of the other 
-        // content boxes and close them before opening the new one.
+    // Format the name so it works with the HTML.
+    var elementName = name + 'Div';
+    
+    // Grab the actual element from the HTML.
+    var element = document.getElementById(elementName);
+
+    // If there is a div that is currently open, then go through all of the
+    // content divs and "close" them.
+    if (currentlyOpen) {
         var allElements = document.getElementsByClassName('content');
-        var allElementsLength = allElements.length;
-
-        // Loop through all of the elements with content as the class,
-        // and close them as in the else statement above.
-        for (var i = 0; i < allElementsLength; i++) {
+        for (var i = 0; i < allElements.length; i++) {
             allElements[i].style.height = '0vh';
-            allElements[i].style.display = '';
         } 
+        currentlyOpen = false;
+    }
 
-        // All divs are closed after this, so that if the last button pressed
-        // is different than the one open on screen, it opens the new div.
-        // Hope that makes sense?
-        divCurrentlyOpen = false;
-        if ( lastOpenDiv != name) {
-            showPane(name);
-        }
+    // If the user tries to close the div that is currently open, it will close
+    // that div and not open a new one. However, if the user tries to open a
+    // different div, then it will be opened and close the previous one.
+    if (lastOpenDiv != name) {
+        element.style.height = '60vh';
+        currentlyOpen = true;
+        lastOpenDiv = name;
     }
 }
