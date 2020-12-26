@@ -10,11 +10,17 @@ First, clone the repository with:
 $ git clone https://github.com/alexmerren/personal-website.git
 ```
 
-Then, to start the server, run these commands in succession:
+Then, to start the server, run this executable file:
+
+```bash
+$ ./run
+```
+
+or run these commands:
 
 ```bash
 $ npm install
-$ ./run
+$ npm start
 ```
 
 this will start the server.
