@@ -64,6 +64,14 @@ button {
     transition: background-color 400ms ease;
  }
 
+ .githubLogo {
+    height:25px;
+    margin:5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    filter: contrast(200%) invert(100%);
+ }
+
 .content {
     height: 0vh;
     overflow: hidden;
