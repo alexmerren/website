@@ -1,30 +1,19 @@
-var currentlyOpen = false;
-var lastOpenDiv;
+function makeActive(name) {
 
-function showPane(name) {
+    // Format the element name properly.
+    var elementName = name + '-link';
 
-    // Format the name so it works with the HTML.
-    var elementName = name + 'Div';
+    // Get an object of all the elements that have the classname page-link.
+    var allNavElements = document.getElementsByClassName('page-link');
+
+    for (var i = 0; i < allNavElements.length; i++) {
+        // Loop through all the elements found with page-link as the class,
+        // and set the background color as defined in the main.css.
+        var currentElement = allNavElements[i];
+        currentElement.style.backgroundColor = '';
+    }
     
-    // Grab the actual element from the HTML.
-    var element = document.getElementById(elementName);
-
-    // If there is a div that is currently open, then go through all of the
-    // content divs and "close" them.
-    if (currentlyOpen) {
-        var allElements = document.getElementsByClassName('content');
-        for (var i = 0; i < allElements.length; i++) {
-            allElements[i].style.height = '0vh';
-        } 
-        currentlyOpen = false;
-    }
-
-    // If the user tries to close the div that is currently open, it will close
-    // that div and not open a new one. However, if the user tries to open a
-    // different div, then it will be opened and close the previous one.
-    if (lastOpenDiv != name) {
-        element.style.height = '60vh';
-        currentlyOpen = true;
-        lastOpenDiv = name;
-    }
+    // Set the current (desired) nav element to bright-pink from main.css.
+    var desiredActiveElement = document.getElementById(elementName);
+    desiredActiveElement.style.backgroundColor = 'var(--bright-pink)';
 }
