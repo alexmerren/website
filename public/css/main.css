@@ -1,8 +1,10 @@
 :root {
-    --bright-blue: #22B3E3;
-    --bright-pink: #E33966;
-    --dark-blue: #087396;
-    --nav-background: #1b242f;
+    --bright-blue: #3EC9F0;
+    --bright-pink: #F0739B;
+    --alternate-background: #DFDFE6;
+    --home-background: #003649;
+    --nav-background: #004E63;
+    --highlight: #F0DD05;
 }
 
 h1, h2, h3, p, a, li {
@@ -72,7 +74,7 @@ body {
 }
 
 .content h2 {
-    padding-top: 100px;
+    padding-top: 85px;
     text-align: center;
     font-weight: 500;
     font-size: 30px;
@@ -83,7 +85,7 @@ body {
 }
 
 #home {
-    background-color: #252934;
+    background-color: var(--home-background);
     height: 100vh;
 }
 
@@ -114,7 +116,7 @@ body {
 }
 
 #projects {
-    background-color: grey;
+    background-color: var(--alternate-background);
 }
 
 /* ==== Footer content goes here ====*/
