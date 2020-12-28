@@ -1,9 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <title>Alex Merren</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link type="text/css" rel="stylesheet" href="/css/main.css" />
+        <link type="text/css" rel="stylesheet" href="/css/responsive.css" />
         <link rel="shortcut icon" href="#" />
+        <link rel="shortcut icon" href="/img/favicon.ico">
         <script src="/js/scripts.js"></script>
     </head>
     <body class>
@@ -22,12 +25,16 @@
             <a id="about-link" class="page-link" href="#about" onclick="makeActive('about')">About</a>
             <a id="project-link" class="page-link" href="#projects" onclick="makeActive('project')">Projects</a>
             <a id="contact-link" class="page-link" href="#contact" onclick="makeActive('contact')">Contact</a>
-            <a href="http://github.com/alexmerren"><img class="githubLogo" src="/img/githubLogo.png" alt="Github logo"></img></a>
+            <div class="socials">
+                <a class="page-link" href="http://www.github.com/alexmerren"><img class="githubLogo" src="/img/githubLogo.png" alt="Github logo"></img></a>
+                <a class="page-link" href="http://www.instagram.com/alexmerren"><img class="instagramLogo" src="/img/instagramLogo.png" alt="Instagram logo"></img></a>
+            </div>
         </div>
         <!-- ABOUT -->
         <section id="about" class="content">
             <div>
                 <h2>About</h2>
+                <p></p>
             </div>
         </section>
         <!-- PROJECTS -->
@@ -45,7 +52,8 @@
         </section>
         <!-- FOOTER -->
         <footer class="footer">
-            <p>This is the footer</p>
+            <p id="footer-left">© Alex Merren</p>
+            <p id="footer-right"><a href="mailto:alexandermerren@gmail.com?subject=Site Issues">Report Issues</a></p>
         </footer>
     </body>
 </html>

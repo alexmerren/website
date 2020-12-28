@@ -1,5 +1,4 @@
 function makeActive(name) {
-
     // Format the element name properly.
     var elementName = name + '-link';
 
@@ -17,3 +16,4 @@ function makeActive(name) {
     var desiredActiveElement = document.getElementById(elementName);
     desiredActiveElement.style.backgroundColor = 'var(--bright-pink)';
 }
+
