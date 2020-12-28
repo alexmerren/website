@@ -25,10 +25,6 @@
             <a id="about-link" class="page-link" href="#about" onclick="makeActive('about')">About</a>
             <a id="project-link" class="page-link" href="#projects" onclick="makeActive('project')">Projects</a>
             <a id="contact-link" class="page-link" href="#contact" onclick="makeActive('contact')">Contact</a>
-            <div class="socials">
-                <a class="page-link" href="http://www.github.com/alexmerren"><img class="githubLogo" src="/img/githubLogo.png" alt="Github logo"></img></a>
-                <a class="page-link" href="http://www.instagram.com/alexmerren"><img class="instagramLogo" src="/img/instagramLogo.png" alt="Instagram logo"></img></a>
-            </div>
         </div>
         <!-- ABOUT -->
         <section id="about" class="content">
@@ -52,8 +48,18 @@
         </section>
         <!-- FOOTER -->
         <footer class="footer">
-            <p id="footer-left">© Alex Merren</p>
-            <p id="footer-right"><a href="mailto:alexandermerren@gmail.com?subject=Site Issues">Report Issues</a></p>
+            <div class="footer-column">
+                <p id="footer-left">© Alex Merren</p>
+            </div>
+            <div class="footer-column">
+                <div class="socials">
+                    <a class="page-link" href="http://www.github.com/alexmerren"><img class="githubLogo" src="/img/githubLogo.png" alt="Github logo"></img></a>
+                    <a class="page-link" href="http://www.instagram.com/alexmerren"><img class="instagramLogo" src="/img/instagramLogo.png" alt="Instagram logo"></img></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <p id="footer-right"><a href="mailto:alexandermerren@gmail.com?subject=Site Issues">Report Issues</a></p>
+            </div>
         </footer>
     </body>
 </html>

@@ -68,22 +68,6 @@ section div {
     font-size: 72px;
 }
 
-.socials {
-    text-align: center;
-    float: right;
-}
-
-.socials img {
-    overflow: hidden;
-    height: 10px;
-    margin: 0 10px;
-    filter: contrast(300%) invert(100%);
-    -webkit-transform: scale(2.5);
-}
-
-.socials img:hover {
-    filter: invert(100%);
-}   
 
 .content {
     height: 100vh;
@@ -142,10 +126,15 @@ section div {
     position: relative;
     bottom: 0;
     left: 0;
-    width: 85%;
+    width: 100%;
     margin: auto;
     padding-bottom: 7%;
     font-size: smaller;
+}
+
+.footer-column {
+    float: left;
+    width: 33%;
 }
 
 .footer p, .footer a {
@@ -158,10 +147,29 @@ section div {
     text-decoration: underline;
 }
 
+.socials {
+    text-align: center;
+    padding-top: 16px;
+}
+
+.socials img {
+    overflow: hidden;
+    height: 10px;
+    margin: 0 10px;
+    filter: contrast(300%) invert(50%);
+    -webkit-transform: scale(2.5);
+}
+
+.socials img:hover {
+    filter: invert(0%);
+}   
+
 #footer-left {
-    float: left;
+    padding-left: 15%;
 }
 
 #footer-right {
     float: right;
+    padding-right: 15%;
 }
+
