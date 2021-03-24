@@ -14,6 +14,14 @@
         margin: 0;
     }
 
+    #lead-up {
+        font-size: 55px;
+    }
+
+    #name {
+        font-size: 60px;
+    }
+
     .content h2 {
         padding-top: 60px;
     }

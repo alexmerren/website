@@ -14,6 +14,6 @@ function makeActive(name) {
     
     // Set the current (desired) nav element to bright-pink from main.css.
     var desiredActiveElement = document.getElementById(elementName);
-    desiredActiveElement.style.backgroundColor = 'var(--bright-pink)';
+    desiredActiveElement.style.backgroundColor = 'var(--bright-orange)';
 }
 
