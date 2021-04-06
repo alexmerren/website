@@ -189,11 +189,8 @@ section div {
     align-items: center;
 }
 
-.socials img {
-    overflow: hidden;
-    height: 30px;
-    margin: 0px 10px;
-    filter: contrast(300%) invert(50%);
+.logo {
+    margin: 10px;
 }
 
 .socials img:hover {
