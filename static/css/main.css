@@ -1,26 +1,25 @@
-
 :root[color-mode="light"] {
-    --surface1:#E6E6E6;
-    --surface2:#F2F2F2;
-    --surface3:#FFFFFF;
-    --element1:#111111;
-    --element2:#222222;
-    --element3:#333333;
-    --primary:#F44336;
-    --secondary:#448AFF;
-    --tertiary:#00A337;
+    --surface1: #e6e6e6;
+    --surface2: #f2f2f2;
+    --surface3: #ffffff;
+    --element1: #111111;
+    --element2: #222222;
+    --element3: #333333;
+    --primary: #f44336;
+    --secondary: #448aff;
+    --tertiary: #00a337;
 }
 
-:root[color-mode="dark"]{
-    --surface1:#262626;
-    --surface2:#333333;
-    --surface3:#404040;
-    --element1:#EEEEEE;
-    --element2:#DDDDDD;
-    --element3:#CCCCCC;
-    --primary:#8B201D;
-    --secondary:#104C90;
-    --tertiary:#007A29;
+:root[color-mode="dark"] {
+    --surface1: #262626;
+    --surface2: #333333;
+    --surface3: #404040;
+    --element1: #eeeeee;
+    --element2: #dddddd;
+    --element3: #cccccc;
+    --primary: #8b201d;
+    --secondary: #104c90;
+    --tertiary: #007a29;
 }
 
 body {
@@ -31,10 +30,13 @@ body {
 
 * {
     font-weight: 100;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, Helvetica, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif, Helvetica,
+        sans-serif;
     text-decoration: none;
     color: var(--element1);
 }
+
 /* ==== Navbar stuff goes here ==== */
 
 .nav {
@@ -46,7 +48,6 @@ body {
     overflow: hidden;
     top: -1px;
     background-color: var(--surface2);
-    border-bottom: 2px solid var(--surface3); 
 }
 
 .nav a {
@@ -57,17 +58,28 @@ body {
     font-weight: 400;
 }
 
-.nav a:hover, .nav > .active{
-    color: var(--tertiary);
+.nav > .active,
+.nav a:hover {
+    background-color: var(--surface3);
+    border-bottom: 2px solid var(--secondary);
 }
 
 /* ==== Page content goes here ==== */
 
-section div {
-    margin: auto;
+.content {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    text-align: center;
 }
 
-/* == HOME == */
+.content h2 {
+    margin-top: 100px;
+    font-weight: 500;
+    font-size: xx-large;
+}
+
+/* == Home == */
 
 .theme-toggle {
     float: right;
@@ -86,19 +98,9 @@ section div {
     margin: 0px;
 }
 
-.content {
-    height: 100vh;
-}
-
-.content h2 {
-    margin: 0px;
-    padding-top: 100px;
-    text-align: center;
-    font-weight: 500;
-    font-size: xx-large;
-}
-
-#home p, #home h1, #home a {
+#home p,
+#home h1,
+#home a {
     color: var(--element1);
 }
 
@@ -114,7 +116,7 @@ section div {
 
 #name a {
     font-weight: 600;
-    background-image: linear-gradient(45DEG, var(--primary), var(--secondary));
+    background-image: linear-gradient(45deg, var(--primary), var(--secondary));
     background-size: 100%;
     background-repeat: repeat;
     background-clip: text;
@@ -124,9 +126,10 @@ section div {
     -moz-text-fill-color: transparent;
 }
 
-#email a, #email {
+#email a,
+#email {
     font-weight: 400;
-    color: var(--element1); 
+    color: var(--element1);
 }
 
 #email a {
@@ -142,16 +145,16 @@ section div {
     width: 250px;
     box-sizing: border-box;
     backface-visibility: hidden;
-    transition: background-color 500ms, border 500ms, transform 500ms; 
-    -webkit-transition: background-color 500ms, border 500ms, transform 500ms; 
+    transition: background-color 500ms, border 500ms, transform 500ms;
+    -webkit-transition: background-color 500ms, border 500ms, transform 500ms;
     -webkit-backface-visibility: hidden;
 }
 
 #button:hover {
     background-color: var(--tertiary);
     border: 2px solid var(--tertiary);
-    transform: scale(1.10);
-    -webkit-transform: scale(1.10);
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
 }
 
 /* == About == */
@@ -159,10 +162,6 @@ section div {
 /* == Projects == */
 
 /* == Contact == */
-
-#contact {
-    height: 90vh;
-}
 
 /* ==== Footer content goes here ====*/
 
@@ -175,10 +174,12 @@ section div {
 }
 
 .footer-column {
-    margin: 3%;
+    margin: 5%;
+    margin-bottom: 3%;
 }
 
-.footer p, .footer a {
+.footer p,
+.footer a {
     font-size: medium;
     font-weight: 400;
     color: grey;
@@ -193,9 +194,18 @@ section div {
     margin: 10px;
 }
 
-.socials img:hover {
-    filter: invert(0%);
-}   
+.logo img {
+    width: auto;
+    height: 35px;
+    filter: gray;
+    filter: grayscale(1);
+    -webkit-filter: grayscale(1);
+}
+
+.logo img:hover {
+    filter: none;
+    -webkit-filter: grayscale(0);
+}
 
 .footer a {
     text-decoration: underline;
