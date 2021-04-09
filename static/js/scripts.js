@@ -61,30 +61,26 @@ function toggleTheme() {
 }
 
 $(document).ready( function() {
-    let data = cleanRepoData();
+    updateTable();
 });
 
-function cleanRepoData() {
-    var dataURL = "https://api.github.com/users/alexmerren/repos"
-    let cleanedData = [];
+function updateTable() {
+    let dataURL = "https://api.github.com/users/alexmerren/repos"
+    let name, description, last_updated, url, language;
 
     $.getJSON(dataURL, function(data) {
-        console.log(data);
-        data.forEach(function(item) {
-            if (item.full_name == "alexmerren/alexmerren") {}
+        for (let iter in data) {
+            let entry = data[iter];
+
+            if (entry.name == "alexmerren") {}
             else {
-                let object = {
-                    'name' : item.name,
-                    'description' : item.description,
-                    'url' : item.url,
-                    'last_update' : item.pushed_at,
-                    'language' : item.language
-                };
-
-                cleanedData.push(object);
+                name = entry.name;
+                description = entry.description;
+                last_updated = entry.pushed_at;
+                language = entry.language;
+                url = entry.html_url;
+                //console.log(`${name}, ${description}, ${last_updated}, ${language}, ${url}`)
             }
-        });
+        }
     });
-
-    return cleanedData;
 }
