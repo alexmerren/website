@@ -65,28 +65,28 @@ function onScroll() {
         });
 }
 
-function cleanRepoData() {
-    var dataURL = "https://api.github.com/users/alexmerren/repos";
-    let cleanedData = [];
+$(document).ready( function() {
+    updateTable();
+});
 
-    $.getJSON(dataURL, function (data) {
-        console.log(data);
-        data.forEach(function (item) {
-            if (item.full_name == "alexmerren/alexmerren") {
-            } else {
-                let object = {
-                    "name": item.name,
-                    "description": item.description,
-                    "url": item.url,
-                    "last_update": item.pushed_at,
-                    "language": item.language,
-                };
+function updateTable() {
+    let dataURL = "https://api.github.com/users/alexmerren/repos"
+    let name, description, last_updated, url, language;
 
-                cleanedData.push(object);
+    $.getJSON(dataURL, function(data) {
+        for (let iter in data) {
+            let entry = data[iter];
+            if (entry.name == "alexmerren") {}
+            else {
+                name = entry.name;
+                description = entry.description;
+                last_updated = entry.pushed_at;
+                language = entry.language;
+                url = entry.html_url;
+                //console.log(`${name}, ${description}, ${last_updated}, ${language}, ${url}`)
             }
-        });
+        }
     });
-
     return cleanedData;
 }
 
@@ -99,3 +99,6 @@ function toggleTheme() {
     }
     localStorage.setItem("color-mode", $("html").attr("color-mode"));
 }
+=======
+}
+>>>>>>> 752d266162fc314062e314be097e29d9f617a15f
