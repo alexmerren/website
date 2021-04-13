@@ -99,6 +99,3 @@ function toggleTheme() {
     }
     localStorage.setItem("color-mode", $("html").attr("color-mode"));
 }
-=======
-}
->>>>>>> 752d266162fc314062e314be097e29d9f617a15f
