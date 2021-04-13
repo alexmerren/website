@@ -3,15 +3,16 @@
 
 <head>
     <title>Alex Merren | Homepage</title>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description"
         content="The homepage for Alex Merren's part of the internet. Providing access to portfolio and other projects." />
     <meta name="color-scheme" content="dark light" />
+    <link rel="icon" href="/img/favicon.ico" />
     <link type="text/css" rel="stylesheet" href="/css/main.css" />
     <link type="text/css" rel="stylesheet" href="/css/responsive.css" />
-    <link rel="apple-touch-icon" href="/img/favicon.ico">
-    <link rel="shortcut icon" href="/img/favicon.ico">
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
     <script type="text/javascript" src="/js/scripts.js"></script>
 </head>
 
@@ -20,10 +21,14 @@
     <section id="home">
         <button class="theme-toggle" onclick="toggleTheme()">Toggle</button>
         <div class="title">
-            <h1 id="lead-up">Hello &#x1F44B;, I'm </h1>
-            <h1 id="name"><a href="/">Alex Merren.</a></h1>
-            <p id="email">Contact me at <a href="mailto:alexandermerren@gmail.com">alexandermerren@gmail.com</a></p>
-            <a id="button" href="#projects">Click here to view my work</a>
+            <h1 id="title__lead-up">Hello &#x1F44B;, I'm</h1>
+            <h1 id="title__name"><a href="/">Alex Merren.</a></h1>
+            <p id="title__email">Contact me at <a href="mailto:alexandermerren@gmail.com">alexandermerren@gmail.com</a>
+            </p>
+            <a id="title__button" href="#projects">Click here to view my work</a>
+            <div>
+                <p id="title__down-arrow">&#8595;</p>
+            </div>
         </div>
     </section>
     <!-- NAV BAR -->
@@ -48,6 +53,16 @@
         <div>
             <h2>About</h2>
             <hr width="100px">
+            <div id="about__inner"">
+                <img id="about__inner__photo" src="/img/me.jpg" />
+            <p id="about__text">
+                My name is Alex Merren. I am a student at the
+                University of Exeter; currently studying Computer Science
+                and Mathematics.<br><br>I have a keen interest in freelance development,
+                focusing on web development and C-family languages. If you have any
+                requests, do not hesitate to contact me in the contact form below!
+                <br><br>I am expecting to intern at HP Enterprise from July 2021 - July 2022.
+            </p>
         </div>
     </section>
     <!-- CONTACT -->
@@ -59,19 +74,20 @@
     </section>
     <!-- FOOTER -->
     <footer class="footer">
-        <div class="footer-column">
-            <p id="footer-left">&copy; Alex Merren</p>
+        <div class="footer__column">
+            <p id="footer__left">&copy; Alex Merren</p>
         </div>
-        <div class="footer-column">
+        <div class="footer__column">
             <div class="socials">
-                <a class="logo" href="http://www.linkedin.com/in/alexmerren/"><img src="/img/linkedin-tile.svg"></img></a>
+                <a class="logo" href="http://www.linkedin.com/in/alexmerren/"><img
+                        src="/img/linkedin-tile.svg"></img></a>
                 <a class="logo" href="http://www.facebook.com/a.merren00/"><img src="/img/facebook-tile.svg"></img></a>
                 <a class="logo" href="http://www.instagram.com/alexmerren"><img src="/img/instagram-tile.svg"></img></a>
                 <a class="logo" href="http://www.github.com/alexmerren"><img src="/img/github-tile.svg"></img></a>
             </div>
         </div>
-        <div class="footer-column">
-            <p id="footer-right"><a href="mailto:alexandermerren@gmail.com?subject=Site Issues">Report Issues</a></p>
+        <div class="footer__column">
+            <p id="footer__right"><a href="mailto:alexandermerren@gmail.com?subject=Site Issues">Report Issues</a></p>
         </div>
     </footer>
 </body>

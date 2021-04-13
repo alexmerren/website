@@ -1,3 +1,5 @@
+/* === Color themes ===  */
+
 :root[color-mode="light"] {
     --surface1: #e6e6e6;
     --surface2: #f2f2f2;
@@ -22,14 +24,15 @@
     --tertiary: #007a29;
 }
 
+/* === Global variables === */
+
 body {
     background: var(--surface1);
-    transition: background-color 500ms color 500ms;
     margin: 0;
 }
 
 * {
-    font-weight: 100;
+    font-weight: 200;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
         Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif, Helvetica,
         sans-serif;
@@ -37,49 +40,45 @@ body {
     color: var(--element1);
 }
 
-/* ==== Navbar stuff goes here ==== */
+/* === Navbar === */
 
 .nav {
     display: flex;
-    flex-direction: row;
-    flex-flow: flex-start;
     align-items: center;
     position: sticky;
-    overflow: hidden;
     top: -1px;
     background-color: var(--surface2);
 }
 
 .nav a {
     color: var(--element3);
-    font-weight: bold;
-    padding: 20px;
-    transition: color 500ms;
+    padding: 1.4em;
     font-weight: 400;
 }
 
 .nav > .active,
 .nav a:hover {
     background-color: var(--surface3);
-    border-bottom: 2px solid var(--secondary);
+    border-bottom: 2px solid var(--tertiary);
 }
 
-/* ==== Page content goes here ==== */
+/* === Global Section === */
 
 .content {
-    height: 80vh;
+    height: 100vh;
     display: flex;
     justify-content: center;
     text-align: center;
 }
 
 .content h2 {
-    margin-top: 100px;
+    margin-top: 5rem;
+    margin-bottom: 0.5em;
     font-weight: 500;
-    font-size: xx-large;
+    font-size: 3rem;
 }
 
-/* == Home == */
+/* === Home === */
 
 .theme-toggle {
     float: right;
@@ -89,19 +88,12 @@ body {
 .title {
     padding: 30vh 0;
     text-align: center;
-    text-shadow: 5px var(--element1);
 }
 
 .title h1 {
     display: inline-block;
+    margin: 0;
     font-size: 500%;
-    margin: 0px;
-}
-
-#home p,
-#home h1,
-#home a {
-    color: var(--element1);
 }
 
 #home {
@@ -109,12 +101,11 @@ body {
     height: 100vh;
 }
 
-#lead-up {
-    color: var(--element1);
+#title__lead-up {
     padding-right: 10px;
 }
 
-#name a {
+#title__name a {
     font-weight: 600;
     background-image: linear-gradient(45deg, var(--primary), var(--secondary));
     background-size: 100%;
@@ -126,17 +117,17 @@ body {
     -moz-text-fill-color: transparent;
 }
 
-#email a,
-#email {
+#title__email a,
+#title__email {
     font-weight: 400;
     color: var(--element1);
 }
 
-#email a {
+#title__email a {
     text-decoration: underline;
 }
 
-#button {
+#title__button {
     font-weight: 400;
     margin: 5px;
     border: 2px solid var(--element1);
@@ -145,25 +136,71 @@ body {
     width: 250px;
     box-sizing: border-box;
     backface-visibility: hidden;
-    transition: background-color 500ms, border 500ms, transform 500ms;
-    -webkit-transition: background-color 500ms, border 500ms, transform 500ms;
+    transition:
+        background-color 500ms,
+        border 500ms,
+        transform 500ms
+    ;
+    -webkit-transition:
+        background-color 500ms,
+        border 500ms,
+        transform 500ms
+    ;
     -webkit-backface-visibility: hidden;
 }
 
-#button:hover {
+#title__button:hover {
     background-color: var(--tertiary);
     border: 2px solid var(--tertiary);
     transform: scale(1.1);
     -webkit-transform: scale(1.1);
 }
 
-/* == About == */
+#title__down-arrow {
+    display: none;
+    text-align: center;
+    font-size: 150%;
+}
 
-/* == Projects == */
+/* === Projects === */
 
-/* == Contact == */
+/* === About === */
 
-/* ==== Footer content goes here ====*/
+#about {
+    background-color: var(--surface2);
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+#about__inner__photo {
+    width: 25%;
+}
+
+#about__text {
+    margin-left: 2rem;
+    text-align: left;
+    line-height: 200%;
+    max-width: 30ch;
+}
+
+#about__inner {
+    margin-bottom: 3rem;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+/* === Contact === */
+
+#contact {
+    height: 80vh;
+}
+
+/* === Footer === */
 
 .footer {
     display: flex;
@@ -173,7 +210,7 @@ body {
     font-size: smaller;
 }
 
-.footer-column {
+.footer__column {
     margin: 5%;
     margin-bottom: 3%;
 }
@@ -211,6 +248,6 @@ body {
     text-decoration: underline;
 }
 
-#footer-right a:hover {
+#footer__right a:hover {
     color: var(--element1);
 }
