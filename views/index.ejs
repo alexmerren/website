@@ -34,7 +34,7 @@
     <!-- NAV BAR -->
     <div class="nav">
         <a href=".">&#8249;</a>
-        <a href="#home">Home</a>
+        <a href="#home" class="active">Home</a>
         <a href="#projects">Projects</a>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
@@ -44,8 +44,79 @@
         <div>
             <h2>Projects</h2>
             <hr width="100px">
-            <table class="repos"></table>
-            <button onclick=updateTable() >Update Table</button>
+            <table class="repos">
+                <thead class="repos__title">
+                    <tr>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Language</th>
+                        <th>Last Update</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><a href="https://github.com/alexmerren/card-game">card-game</a></td>
+                        <td>A card game application for ECM2414.</td>
+                        <td>Java</td>
+                        <td>26/12/2020</td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://github.com/alexmerren/file-organiser">file-organiser</a></td>
+                        <td>A C++ program to organise directories into sub-directories from the command line.</td>
+                        <td>C++</td>
+                        <td>05/12/2020</td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://github.com/alexmerren/mass-renamer-cpp">mass-renamer-cpp</a></td>
+                        <td>A C++ program to facilitate mass renaming on the command line</td>
+                        <td>C++</td>
+                        <td>05/12/2020</td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://github.com/alexmerren/order-processor">order-processor</a></td>
+                        <td>An order processing application for ECM2433.</td>
+                        <td>C++</td>
+                        <td>18/03/2021</td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://github.com/alexmerren/personal-website">personal-website</a></td>
+                        <td>A repository containing all the files used in my personal website at www.alexmerren.uk</td>
+                        <td>EJS</td>
+                        <td>13/04/2021</td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://github.com/alexmerren/post-office-simulator">post-office-simulator</a></td>
+                        <td>A post office simulation for ECM2433.</td>
+                        <td>C</td>
+                        <td>11/03/2021</td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://github.com/alexmerren/project-euler-solutions">project-euler-solutions</a></td>
+                        <td>This is a collection of solutions to the problems on https://projecteuler.net/archives</td>
+                        <td>C++</td>
+                        <td>28/11/2020</td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://github.com/alexmerren/sorting-visualiser">sorting-visualiser</a></td>
+                        <td>A website that visualises different methods of sorting arrays.</td>
+                        <td>JavaScript</td>
+                        <td>16/04/2021</td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://github.com/alexmerren/stock-control-website">stock-control-website</a></td>
+                        <td>A website for ECM1417.</td>
+                        <td>PHP</td>
+                        <td>30/11/2020</td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://github.com/alexmerren/word-counter">word-counter</a></td>
+                        <td>A C++ program I made to count the frequency of characters in a text file.</td>
+                        <td>C++</td>
+                        <td>23/12/2020</td>
+                    </tr>
+                </tbody>
+            </table>
+            <button onclick=updateTable()>Update Table</button>
         </div>
     </section>
     <!-- ABOUT -->
