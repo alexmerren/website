@@ -76,6 +76,7 @@ function updateTable() {
 
     $table.append('<thead class="repos__title"><th>Name</th><th>Description</th><th>Language</th><th>Last Update</th></thead>');
     $table.append('<tbody>');
+
     $.getJSON(dataURL, function (data) {
         entry = data[0];
 

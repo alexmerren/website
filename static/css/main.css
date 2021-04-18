@@ -62,6 +62,11 @@ body {
     border-bottom: 2px solid var(--tertiary);
 }
 
+.theme-toggle {
+    justify-content: flex-end;
+    margin: 0 1em;
+}
+
 /* === Global Section === */
 
 .content {
@@ -78,11 +83,6 @@ body {
 }
 
 /* === Home === */
-
-.theme-toggle {
-    float: right;
-    margin: 2%;
-}
 
 .title {
     padding: 30vh 0;
@@ -175,13 +175,13 @@ body {
 
 .repos__title th {
     font-weight: 600;
-    border-bottom: 1px solid var(--element1);
+    border-bottom: 1px solid var(--element3);
     vertical-align: middle;
 }
 
 tr {
     vertical-align: top;
-    border-bottom: 1px solid var(--element1);
+    border-bottom: 1px solid var(--element3);
 }
 
 tr:last-of-type {
@@ -190,8 +190,8 @@ tr:last-of-type {
 
 td,
 th {
-    font-size: 1.1em;
-    padding: 0.7em;
+    font-size: 1.05em; 
+    padding: 0.7em 1em;
 }
 
 #projects div button {
@@ -228,8 +228,6 @@ th {
     justify-content: center;
 }
 
-/* === Contact === */
-
 /* === Footer === */
 
 .footer {
@@ -241,8 +239,7 @@ th {
 }
 
 .footer__column {
-    margin: 5%;
-    margin-bottom: 3%;
+    margin: 1% 5%;
 }
 
 .footer p,
