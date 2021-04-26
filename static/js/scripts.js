@@ -1,16 +1,4 @@
 $(document).ready(function () {
-    // Making the arrow bounce up and down at the bottom of the home div
-    setInterval(function () {
-        $('#title__down-arrow').show();
-        setInterval(function () {
-            $('#title__down-arrow').effect(
-                'bounce',
-                { times: 3, distance: 15 },
-                'slow'
-            );
-        }, 1000);
-    }, 5000);
-
     // Checking and setting color theme
     if (
         localStorage.getItem('color-mode') === 'dark' ||
@@ -44,6 +32,10 @@ $(document).ready(function () {
                 $(document).on('scroll', onScroll);
             });
     });
+
+    // Update the projects table.
+    updateTable();
+
 });
 
 // Function to change the highlighted section in navbar
@@ -68,16 +60,17 @@ function onScroll() {
         });
 }
 
+// Function to add items to the repos table.
 function updateTable() {
-    let iter, entry, name, description, last_updated, url, language;
-    let dataURL = 'https://api.github.com/users/alexmerren/repos';
-    let $table = $('.repos');
+    let iter, entry, name, description, last_updated, url, language, dataURL, $table;
+    dataURL = 'https://api.github.com/users/alexmerren/repos';
+    $table = $('.repos');
     $table.empty();
 
     $table.append('<thead class="repos__title"><th>Name</th><th>Description</th><th>Language</th><th>Last Update</th></thead>');
     $table.append('<tbody>');
 
-    $.getJSON(dataURL, function (data) {
+    $.getJSON(dataURL, function(data) {
         entry = data[0];
 
         for (iter in data) {
@@ -107,10 +100,5 @@ function toggleTheme() {
 
 // Function to format date from github repo JSON.
 function formatDate(date) {
-    let day, month, year, shortDate;
-    year = date.slice(0,4);
-    month = date.slice(5,7);
-    day = date.slice(8,10);
-    shortDate = day + '/' + month + '/' + year;
-    return shortDate;
+    return date.slice(8,10) + '/' + date.slice(5,7) + '/' + date.slice(0,4);
 }

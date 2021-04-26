@@ -17,131 +17,76 @@
 </head>
 
 <body>
-    <!-- HOME -->
-    <section id="home">
-        <div class="title">
-            <h1 id="title__lead-up">Hello &#x1F44B;, I'm</h1>
-            <h1 id="title__name"><a href="/">Alex Merren.</a></h1>
-            <p id="title__email">Contact me at <a href="mailto:alexandermerren@gmail.com">alexandermerren@gmail.com</a>
-            </p>
-            <a id="title__button" href="#projects">Click here to view my work</a>
-            <div>
-                <p id="title__down-arrow">&#8595;</p>
-            </div>
+    <!-- HEADER -->
+    <header id="header">
+        <h1 id="title"><a href=".">A</a></h1>
+        <div class="nav">
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+            <a href="sorting/">Sorting Visualiser</a>
+            <!-- <img onClick="toggleTheme()" src="/img/theme.png" class="theme-toggle"/> -->
         </div>
-    </section>
-    <!-- NAV BAR -->
-    <div class="nav">
-        <a href=".">&#8249;</a>
-        <a href="#home" class="active">Home</a>
-        <a href="#projects">Projects</a>
-        <a href="#about">About</a>
-        <a href="sorting/">Sorting Visualiser</a>
-        <!-- <button class="theme-toggle" type="checkbox" onclick="toggleTheme()">Toggle Theme</button> -->
-    </div>
-    <!-- PROJECTS -->
-    <section id="projects" class="content">
-        <div>
-            <h2>Projects</h2>
-            <hr width="100px">
-            <table class="repos">
-                <thead class="repos__title">
-                    <tr>
-                        <th>Name</th>
-                        <th>Description</th>
-                        <th>Language</th>
-                        <th>Last Update</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><a href="https://github.com/alexmerren/card-game">card-game</a></td>
-                        <td>A card game application for ECM2414.</td>
-                        <td>Java</td>
-                        <td>26/12/2020</td>
-                    </tr>
-                    <tr>
-                        <td><a href="https://github.com/alexmerren/file-organiser">file-organiser</a></td>
-                        <td>A C++ program to organise directories into sub-directories from the command line.</td>
-                        <td>C++</td>
-                        <td>05/12/2020</td>
-                    </tr>
-                    <tr>
-                        <td><a href="https://github.com/alexmerren/mass-renamer-cpp">mass-renamer-cpp</a></td>
-                        <td>A C++ program to facilitate mass renaming on the command line</td>
-                        <td>C++</td>
-                        <td>05/12/2020</td>
-                    </tr>
-                    <tr>
-                        <td><a href="https://github.com/alexmerren/order-processor">order-processor</a></td>
-                        <td>An order processing application for ECM2433.</td>
-                        <td>C++</td>
-                        <td>18/03/2021</td>
-                    </tr>
-                    <tr>
-                        <td><a href="https://github.com/alexmerren/personal-website">personal-website</a></td>
-                        <td>A repository containing all the files used in my personal website at www.alexmerren.uk</td>
-                        <td>EJS</td>
-                        <td>13/04/2021</td>
-                    </tr>
-                    <tr>
-                        <td><a href="https://github.com/alexmerren/post-office-simulator">post-office-simulator</a></td>
-                        <td>A post office simulation for ECM2433.</td>
-                        <td>C</td>
-                        <td>11/03/2021</td>
-                    </tr>
-                    <tr>
-                        <td><a href="https://github.com/alexmerren/project-euler-solutions">project-euler-solutions</a>
-                        </td>
-                        <td>This is a collection of solutions to the problems on https://projecteuler.net/archives</td>
-                        <td>C++</td>
-                        <td>28/11/2020</td>
-                    </tr>
-                    <tr>
-                        <td><a href="https://github.com/alexmerren/sorting-visualiser">sorting-visualiser</a></td>
-                        <td>A website that visualises different methods of sorting arrays.</td>
-                        <td>JavaScript</td>
-                        <td>16/04/2021</td>
-                    </tr>
-                    <tr>
-                        <td><a href="https://github.com/alexmerren/stock-control-website">stock-control-website</a></td>
-                        <td>A website for ECM1417.</td>
-                        <td>PHP</td>
-                        <td>30/11/2020</td>
-                    </tr>
-                    <tr>
-                        <td><a href="https://github.com/alexmerren/word-counter">word-counter</a></td>
-                        <td>A C++ program I made to count the frequency of characters in a text file.</td>
-                        <td>C++</td>
-                        <td>23/12/2020</td>
-                    </tr>
-                </tbody>
-            </table>
-            <button onclick=updateTable()>Update Table</button>
-        </div>
+    </header>
+    <!-- INTRO -->
+    <section id="intro" class="content">
+        <h1>Hey &#128075;. I'm Alex.</h1>
+        <h2>I'm a developer. Check out my stuff below.</h2>
     </section>
     <!-- ABOUT -->
     <section id="about" class="content">
-        <div>
-            <h2>About</h2>
-            <hr>
-            <div id="about__inner">
-                <img id="about__inner__photo" src="/img/me.jpg" alt="Photo of Alex Merren"/>
-                <p id="about__text">
-                    My name is Alex Merren. I am a student at the
+        <h2>About</h2>
+        <div id="about__inner">
+            <div>
+                <img id="about__photo" src="/img/me.png" alt="Photo of Alex Merren"/>
+            </div>
+            <div id="about__text">
+                <p> 
+                    My name is Alex. I am a student at the
                     University of Exeter; currently studying Computer Science
                     and Mathematics.<br><br>I have a keen interest in freelance development,
                     focusing on web development and C-family languages. If you have any
                     requests, do not hesitate to contact me in the contact form below!
                     <br><br>I am expecting to intern at HP Enterprise from July 2021 - July 2022.
                 </p>
+                <a href="#projects">You can view my work here.</a>
             </div>
+        </div>
+    </section>
+    <!-- PROJECTS -->
+    <section id="projects" class="content">
+        <div>
+            <h2>Projects</h2>
+            <table class="repos"></table>
+            <button onclick=updateTable()>Update Table</button>
+        </div>
+    </section>
+    <!-- CONTACT -->
+    <section id="contact" class="content">
+        <h2>Contact</h2>
+        <div id="contact__top">
+            <div class="contact__entry">
+                <p>Full Name</p>
+                <input />
+            </div>
+            <div class="contact__entry">
+                <p>Email Address</p>
+                <input />
+            </div>
+        </div>
+        <div class="contact__entry">
+            <p>Subject</p>
+            <input />
+        </div>
+        <div class="contact__entry">
+            <p>Description</p>
+            <input />
         </div>
     </section>
     <!-- FOOTER -->
     <footer class="footer">
         <div class="footer__column">
-            <p id="footer__left">&copy; Alex Merren</p>
+            <p id="footer__left">&copy; Alex Merren 2021</p>
         </div>
         <div class="footer__column">
             <div class="socials">

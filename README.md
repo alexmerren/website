@@ -2,6 +2,14 @@
 A repository containing all the files used in my personal website at 
 www.alexmerren.uk
 
+## To Do
+
+ - [x] Redesign interface
+ - [x] Rearrange the website
+ - [ ] Create a business-oriented project
+ - [ ] Expand the 'About' section of the website
+ - [ ] Make interface mobile-friendly
+
 ## Setup
 
 First, clone the repository with:
