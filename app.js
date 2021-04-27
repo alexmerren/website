@@ -1,7 +1,7 @@
 const express = require('express');
 const url = require('url');
 const app = express();
-const PORT = 80;
+const PORT = 8080;
 
 // Set the images/stylesheets to be in /static
 app.use(express.static(__dirname + '/static'));
