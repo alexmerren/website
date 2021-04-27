@@ -95,6 +95,10 @@ body {
     font-size: 500%;
 }
 
+hr {
+    width: 5em;
+}
+
 #home {
     background-color: var(--surface1);
     height: 100vh;
