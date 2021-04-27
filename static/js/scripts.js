@@ -52,7 +52,7 @@ function onScroll() {
     scrollPos = $(document).scrollTop() + $(window).height() / 2;
 
     $('.nav a')
-        .slice(1)
+        .slice(1,4)
         .each(function () {
             currentLink = $(this);
             refElement = $(currentLink.attr('href'));

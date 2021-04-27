@@ -1,7 +1,7 @@
 const express = require('express');
 const url = require('url');
 const app = express();
-const PORT = 8080;
+const PORT = 80;
 
 // Set the images/stylesheets to be in /static
 app.use(express.static(__dirname + '/static'));
@@ -17,7 +17,18 @@ app.listen(PORT, function () {
 
 // Render the homepage upon visiting
 app.get('/', function(req, res) {
-    res.render('index') 
+    res.render('index');
+});
+
+// Render the index for sorting
+app.get('/robots.txt', function(req, res) {
+    res.type('text/plain');
+    res.send("User-agent: *\nDisallow: /");
+});
+
+// Render the index for sorting
+app.get('/sorting', function(req, res) {
+    res.render('sorting/index');
 });
 
 // When a request is made to 'www.website.com/page' it redirects to page/index 
@@ -26,5 +37,3 @@ app.get('/', function(req, res) {
 //    var pathname = '.' + reqUrl + '/index';
 //    res.render(pathname);
 //});
-
-
