@@ -15,25 +15,25 @@ app.listen(PORT, function () {
     console.log(`An app listening on port ${PORT}`);
 });
 
-// Render the homepage upon visiting
+// Function to send homepage when request is made.
 app.get('/', function(req, res) {
     res.render('index');
 });
 
-// Render the index for sorting
-app.get('/robots.txt', function(req, res) {
-    res.type('text/plain');
-    res.send("User-agent: *\nDisallow: /");
-});
-
-// Render the index for sorting
+// Function to send the sorting visualiser page when request is made.
 app.get('/sorting', function(req, res) {
     res.render('sorting/index');
 });
 
-// When a request is made to 'www.website.com/page' it redirects to page/index 
-//app.use('/', function(req, res) {
-//    var reqUrl = url.parse(req.url, true).pathname;
-//    var pathname = '.' + reqUrl + '/index';
-//    res.render(pathname);
-//});
+// Function to send the robots.txt (for Google) when requested.
+app.get('/robots.txt', function(req, res) {
+    res.type('text/plain');
+    res.send("User-agent: *\nDisallow: /\nSitemap: http://alexmerren.uk/sitemap.xml");
+});
+
+// Function to send the sitemap (used for SEO) when requested
+app.get('/sitemap.xml', function(req, res) {
+    res.setHeader('Content-Type', 'application/xml');
+    res.type('text/xml');
+    res.sendFile(__dirname + '/views/sitemap.xml');
+});
