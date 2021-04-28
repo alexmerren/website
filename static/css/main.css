@@ -1,6 +1,6 @@
 /* === Color themes ===  */
 
-:root[color-mode="light"] {
+:root {
     --surface1: #ffffff;
     --surface2: #eeeeee;
     --element1: #111111;
