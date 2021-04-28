@@ -28,7 +28,7 @@ app.get('/sorting', function(req, res) {
 // Function to send the robots.txt (for Google) when requested.
 app.get('/robots.txt', function(req, res) {
     res.type('text/plain');
-    res.send("User-agent: *\nDisallow: /\nSitemap: http://alexmerren.uk/sitemap.xml");
+    res.send("User-agent: *\nDisallow: \nSitemap: http://alexmerren.uk/sitemap.xml");
 });
 
 // Function to send the sitemap (used for SEO) when requested
