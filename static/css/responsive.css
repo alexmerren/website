@@ -1,32 +1,91 @@
 @media only screen and (max-width: 640px) {
-    .nav a {
-        padding: 10px;
+
+    /* === Global === */
+
+    body {
+        margin: 0;
+        background: -webkit-linear-gradient(
+            -80deg,
+            var(--second),
+            var(--first) 24em,
+            var(--surface1) 24.1em
+        );
+    }
+
+    /* === Header === */
+
+    #header {
         display: none;
-        float: none;
     }
 
-    .title {
-        padding: 20vh 0;
+    /* === Intro === */
+
+    #intro {
+        margin: 0 2em;
+        padding-top: 4em;
     }
 
-    .title h1 {
-        display: inline-block;
+    #intro h1 {
+        font-size: 4em;
+        max-width: 7ch;
+        margin-bottom: 0.2em;
+    }
+
+    #intro h2 {
+        font-size: 2em;
+    }
+
+    /* === About === */
+
+    #about {
+        margin-bottom: 0;
+    }
+
+    #about__inner {
+        flex-direction: column;
+    }
+
+    #about__text {
+        min-width: 30ch;
+    }
+
+    #about__text a {
+        display: none;
+    }
+
+    /* === Projects === */
+
+    #projects__mobile {
+        display: block;
+    }
+
+    #projects div {
+        display: none;
+    }
+
+    #projects {
         margin: 0;
     }
 
-    #lead-up {
-        font-size: 55px;
+    /* === Contact=== */
+
+    #contact {
+        margin: 0 1em;
     }
 
-    #name {
-        font-size: 60px;
+    /* === Footer === */
+
+    .footer{
+        flex-direction: column;
+        margin: 0;
     }
 
-    .content h2 {
-        padding-top: 60px;
+    .footer__column {
+        justify-content: center;
+        margin: 1em auto;
     }
 
-    .footer {
-        padding-bottom: 20%;
+    .logo img{
+        height: 3em;
     }
 }

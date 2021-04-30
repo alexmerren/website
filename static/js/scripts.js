@@ -8,55 +8,25 @@ $(document).ready(function () {
         $("html").attr("color-mode", "dark");
     }
 
-    // Whenever scrolling, use the onScroll function
-    $(document).on("scroll", onScroll);
-
     // Whenever clicking on a link that points inside the web page,
     // use this custom function.
     $("a[href^='#']").on("click", function (e) {
         e.preventDefault();
         $(document).off("scroll");
 
-        $("nav a").each(function () {
-            $(this).removeClass("active");
-        });
-        $(this).addClass("active");
-
         let target = this.hash;
         $target = $(target);
 
         $("html, body")
             .stop()
-            .animate({ scrollTop: $target.offset().top }, 200, function () {
+            .animate({ scrollTop: $target.offset().top }, 250, function () {
                 window.location.has = target;
-                $(document).on("scroll", onScroll);
             });
     });
 
     // Update the projects table.
     updateTable();
 });
-
-// Function to change the highlighted section in navbar
-function onScroll() {
-    let currentLink, refElement, scrollPos;
-    scrollPos = $(document).scrollTop() + $(window).height() / 2;
-
-
-    $(".nav a").each(function () {
-        currentLink = $(this);
-        refElement = $(currentLink.attr("href"));
-        if (
-            refElement.position().top <= scrollPos &&
-            currentLink.offset().top + refElement.height() > scrollPos
-        ) {
-            $(".nav a").removeClass("active");
-            currentLink.addClass("active");
-        } else {
-            currentLink.removeClass("active");
-        }
-    });
-}
 
 // Function to add items to the repos table.
 function updateTable() {

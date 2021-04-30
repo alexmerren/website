@@ -155,6 +155,7 @@ h3 {
 
 #projects {
     display: flex;
+    flex-direction: column;
     justify-content: center;
 }
 
@@ -162,6 +163,7 @@ h3 {
     text-align: left;
     margin: 2em 1em;
     border-collapse: collapse;
+    align-self: center;
 }
 
 .repos tbody a {
@@ -191,13 +193,22 @@ th {
 }
 
 #projects div {
-    text-align: center;
+    display: flex;
+    flex-direction: column;
 }
 
 #projects div button {
     background-color: var(--surface2);
     border: none;
     padding: 1em;
+    width: 10em;
+    align-self: center;
+}
+
+#projects__mobile {
+    text-align: center;
+    font-size: 1.1em;
+    display: none;
 }
 
 /* === Contact === */
@@ -228,11 +239,15 @@ th {
     justify-content: space-between;
 }
 
+#contact__message input {
+    height: 10em;
+}
+
 /* === Footer === */
 
 .footer {
     display: flex;
-    padding: 2em 4em;
+    margin: 2em 4em;
     align-items: center;
 }
 
