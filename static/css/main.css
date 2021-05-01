@@ -1,6 +1,6 @@
 /* === Color themes ===  */
 
-:root {
+:root[color-mode="light"] {
     --surface1: #ffffff;
     --surface2: #eeeeee;
     --element1: #111111;
@@ -9,6 +9,14 @@
     --second: #308af5;
 }
 
+:root[color-mode="dark"] {
+    --surface1: #111111;
+    --surface2: #333333;
+    --element1: #ffffff;
+    --element2: #eeeeee;
+    --first: #304df5;
+    --second: #308af5;
+}
 /* === Global variables === */
 
 html {
@@ -106,7 +114,7 @@ input {
 
 #intro {
     margin: 5em;
-    margin-top: 4em;
+    margin-top: 3em;
     margin-bottom: 8em;
 }
 
@@ -197,12 +205,15 @@ th {
     flex-direction: column;
 }
 
-#projects div button {
+#projects div button,
+#contact__submit {
+    align-self: center;
+    width: 10em;
     background-color: var(--surface2);
     border: none;
     padding: 1em;
-    width: 10em;
-    align-self: center;
+    cursor: pointer;
+    font-size: 1em;
 }
 
 #projects__mobile {
@@ -230,6 +241,8 @@ th {
 }
 
 .contact__entry input {
+    border: none;
+    height: 2em;
     background-color: var(--surface2);
 }
 
@@ -239,8 +252,28 @@ th {
     justify-content: space-between;
 }
 
-#contact__message input {
+#contact__message textarea {
+    background-color: var(--surface2);
+    resize: none;
+    border: none;
+    padding-top: 0.5em;
     height: 10em;
+}
+
+textarea,
+input {
+    font-size: 1.1em;
+    text-indent: 0.5em;
+}
+
+#contact__submit {
+    margin: 2em 0;
+}
+
+#contact__done {
+    text-align: center;
+    font-size: 1.1em;
+    display: none;
 }
 
 /* === Footer === */
