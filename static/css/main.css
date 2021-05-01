@@ -14,9 +14,10 @@
     --surface2: #333333;
     --element1: #ffffff;
     --element2: #eeeeee;
-    --first: #304df5;
-    --second: #308af5;
+    --first: #239400;
+    --second: #2fc900;
 }
+
 /* === Global variables === */
 
 html {
@@ -38,6 +39,17 @@ body {
 
 .content {
     margin: 2em;
+}
+
+.content a,
+.footer a {
+    color: var(--second);
+    transition: color 200ms ease-out;
+}
+
+.content a:hover,
+.footer a:hover {
+    color: var(--element2);
 }
 
 /* === Typography === */
@@ -97,6 +109,14 @@ input {
 .nav > * {
     margin: 0 1em;
     color: var(--surface1);
+}
+
+.nav > a {
+    transition: color 200ms ease-out;
+}
+
+.nav > a:hover {
+    color: var(--element1);
 }
 
 .theme-toggle {

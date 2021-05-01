@@ -73,6 +73,10 @@
         margin: 0 1em;
     }
 
+    #contact__top {
+        flex-direction: column;
+    }
+
     /* === Footer === */
 
     .footer{
