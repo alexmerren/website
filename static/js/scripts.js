@@ -6,7 +6,6 @@ $(document).ready(function () {
             !localStorage.getItem("color-mode"))
     ) {
         $("html").attr("color-mode", "dark");
-        $(".theme-toggle").css("filter", "invert(0%)");
     }
 
     // Whenever clicking on a link that points inside the web page,
@@ -69,26 +68,7 @@ function updateTable() {
     });
 }
 
-// Function to toggle dark mode.
-function toggleTheme() {
-    if ($("html").attr("color-mode") == "light") {
-        $("html").attr("color-mode", "dark");
-        $(".theme-toggle").css("filter", "invert(0%)");
-    } else {
-        $("html").attr("color-mode", "light");
-        $(".theme-toggle").css("filter", "invert(100%)");
-    }
-    localStorage.setItem("color-mode", $("html").attr("color-mode"));
-}
-
 // Function to format date from github repo JSON.
 function formatDate(date) {
     return date.slice(8, 10) + "/" + date.slice(5, 7) + "/" + date.slice(0, 4);
-}
-
-function submitForm() {
-    $("#contact__top").css("display", "none");
-    $("#contact__message").css("display", "none");
-    $("#contact__submit").css("display", "none");
-    $("#contact__done").css("display", "block");
 }
