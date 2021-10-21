@@ -11,7 +11,8 @@ app.use(express.static(__dirname + "/static"));
 
 // Tell the server to render ejs files
 app.set("trust proxy", true);
-app.set("view engine", "ejs");
+app.set("view engine", "html");
+app.engine('.html', require('ejs').__express);
 
 // Function to send homepage when request is made.
 app.get("/", function (req, res) {

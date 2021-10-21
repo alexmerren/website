@@ -20,6 +20,10 @@
         align-items: center;
     }
 
+    #intro__left h1 {
+        font-size: 4rem;
+    }
+
     #intro__left > * {
         max-width: 100%;
     }
@@ -41,7 +45,7 @@
         margin: 1em auto;
     }
 
-    .logo img{
+    .logo img {
         height: 3em;
     }
 }
@@ -57,6 +61,11 @@
 
     #header {
         display: none;
+    }
+
+    #intro__left h1 {
+        font-size: 3rem;
+        margin-bottom: 0.5em;
     }
 
     /* === Projects === */
