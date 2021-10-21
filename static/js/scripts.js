@@ -1,16 +1,5 @@
 $(document).ready(function () {
-    // Checking and setting color theme
-    if (
-        localStorage.getItem("color-mode") === "dark" ||
-        (window.matchMedia("(prefers-color-scheme: dark)").matches &&
-            !localStorage.getItem("color-mode"))
-    ) {
-        $("html").attr("color-mode", "dark");
-        $(".theme-toggle").css("filter", "invert(0%)");
-    }
-
-    // Whenever clicking on a link that points inside the web page,
-    // use this custom function.
+    // Clicking a link to a section on the page, use this function. 
     $("a[href^='#']").on("click", function (e) {
         e.preventDefault();
         $(document).off("scroll");
@@ -35,7 +24,6 @@ function updateTable() {
         entry,
         name,
         description,
-        last_updated,
         url,
         language,
         dataURL,
@@ -45,7 +33,7 @@ function updateTable() {
     $table.empty();
 
     $table.append(
-        '<thead class="repos__title"><th>Name</th><th>Description</th><th>Language</th><th>Last Update</th></thead>'
+        '<thead class="repos__title"><th>Name</th><th>Description</th><th>Language</th></thead>'
     );
     $table.append("<tbody>");
 
@@ -58,37 +46,17 @@ function updateTable() {
             } else {
                 name = entry.name;
                 description = entry.description;
-                last_updated = formatDate(entry.pushed_at);
                 language = entry.language;
                 url = entry.html_url;
                 $(".repos >tbody").append(
-                    `<tr><td><a href="${url}">${name}</a></td><td>${description}</td><td>${language}</td><td>${last_updated}</td></tr>`
+                    `<tr><td><a href="${url}">${name}</a></td><td>${description}</td><td>${language}</td></tr>`
                 );
             }
         }
     });
 }
 
-// Function to toggle dark mode.
-function toggleTheme() {
-    if ($("html").attr("color-mode") == "light") {
-        $("html").attr("color-mode", "dark");
-        $(".theme-toggle").css("filter", "invert(0%)");
-    } else {
-        $("html").attr("color-mode", "light");
-        $(".theme-toggle").css("filter", "invert(100%)");
-    }
-    localStorage.setItem("color-mode", $("html").attr("color-mode"));
-}
-
 // Function to format date from github repo JSON.
 function formatDate(date) {
     return date.slice(8, 10) + "/" + date.slice(5, 7) + "/" + date.slice(0, 4);
-}
-
-function submitForm() {
-    $("#contact__top").css("display", "none");
-    $("#contact__message").css("display", "none");
-    $("#contact__submit").css("display", "none");
-    $("#contact__done").css("display", "block");
 }

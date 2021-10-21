@@ -1,81 +1,39 @@
-@media only screen and (max-width: 640px) {
-
-    /* === Global === */
-
-    body {
-        margin: 0;
-        background: -webkit-linear-gradient(
-            -80deg,
-            var(--second),
-            var(--first) 24em,
-            var(--surface1) 24.1em
-        );
-    }
-
-    /* === Header === */
-
-    #header {
-        display: none;
-    }
-
+@media only screen and (max-width: 1480px) {
     /* === Intro === */
 
     #intro {
-        margin: 0 2em;
-        padding-top: 4em;
+        display: flex;
+        flex-direction: column-reverse;
     }
 
-    #intro h1 {
-        font-size: 4em;
-        max-width: 7ch;
-        margin-bottom: 0.2em;
-    }
-
-    #intro h2 {
-        font-size: 2em;
-    }
-
-    /* === About === */
-
-    #about {
-        margin-bottom: 0;
-    }
-
-    #about__inner {
+    #intro__right {
         flex-direction: column;
-    }
-
-    #about__text {
-        min-width: 30ch;
-    }
-
-    #about__text a {
-        display: none;
-    }
-
-    /* === Projects === */
-
-    #projects__mobile {
-        display: block;
-    }
-
-    #projects div {
-        display: none;
-    }
-
-    #projects {
+        align-items: center;
+        justify-content: center;
         margin: 0;
+        text-align: center;
     }
 
-    /* === Contact=== */
-
-    #contact {
-        margin: 0 1em;
-    }
-
-    #contact__top {
+    #intro__left {
+        display: flex;
         flex-direction: column;
+        align-items: center;
     }
+
+    #intro__left h1 {
+        font-size: 4rem;
+        margin: 1rem 0;
+    }
+
+    #intro__left > * {
+        max-width: 100%;
+    }
+
+    #intro__left p {
+        max-width: 100%;
+        text-align: justify;
+    }
+
 
     /* === Footer === */
 
@@ -89,7 +47,40 @@
         margin: 1em auto;
     }
 
-    .logo img{
+    .logo img {
         height: 3em;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    /* === Global === */
+    body {
+        margin: 4em 2em;;
+        max-width: 100%;
+    }
+
+    /* === Header === */
+
+    #header {
+        display: none;
+    }
+
+    #intro__left h1 {
+        font-size: 2.5rem;
+    }
+
+    /* === Projects === */
+
+    #projects__mobile {
+        margin-top: 2em;
+        display: block;
+    }
+
+    #projects div {
+        display: none;
+    }
+
+    #projects {
+        margin: 0;
     }
 }

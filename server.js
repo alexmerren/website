@@ -2,68 +2,80 @@ const fs = require("fs");
 const http = require("http");
 const https = require("https");
 const express = require("express");
-const app = express();
-
-const privateKey = fs.readFileSync("", "UTF-8");
-const certificate = fs.readFileSync("", "UTF-8");
-const ca = fs.readFileSync("", "UTF-8");
-const credentials = {
-    key: privateKey,
-    cert: certificate,
-    ca: ca,
-};
 
 // Create two server, one http and another https.
-const httpServer = http.createServer(app);
-const httpsServer = https.createServer(credentials, app);
+const app = express();
 
 // Set the images/stylesheets to be in /static
 app.use(express.static(__dirname + "/static"));
 
-// If there is a https connection available, then redirect.
-app.use((req, res, next) => {
-    req.secure ? next() : res.redirect("https://" + req.headers.host + req.url);
-});
-
 // Tell the server to render ejs files
 app.set("trust proxy", true);
-app.set("view engine", "ejs");
-
-// Start the servers.
-httpServer.listen(80, () => {
-    console.log("HTTP server running on port 80");
-});
-
-httpsServer.listen(443, () => {
-    console.log("HTTP server running on port 443");
-});
-
-// Opens a server at port 8080 (testing only).
-app.listen(8080, function () {
-    console.log("An app listening on port 8080");
-});
+app.set("view engine", "html");
+app.engine('.html', require('ejs').__express);
 
 // Function to send homepage when request is made.
 app.get("/", function (req, res) {
-    res.render("index");
+    res.status(200).render("index", {
+        title: "Home",
+    });
 });
 
 // Function to send the sorting visualiser page when request is made.
 app.get("/sorting", function (req, res) {
-    res.render("sorting/index");
+    res.status(200).render("sorting/index");
 });
 
 // Function to send the robots.txt (for Google) when requested.
 app.get("/robots.txt", function (req, res) {
-    res.type("text/plain");
-    res.send(
-        "User-agent: *\nDisallow: \nSitemap: http://alexmerren.uk/sitemap.xml"
-    );
+    res.status(200).sendFile(__dirname + "/views/robots.txt");
 });
 
 // Function to send the sitemap (used for SEO) when requested
 app.get("/sitemap.xml", function (req, res) {
-    res.setHeader("Content-Type", "application/xml");
-    res.type("text/xml");
-    res.sendFile(__dirname + "/views/sitemap.xml");
+    res.status(200).sendFile(__dirname + "/views/sitemap.xml");
 });
+
+// Function to send 404 responses for inaccurate requests.
+// This has to be the last route!
+app.use(function (req, res) {
+    res.status(404).render("404", {
+        title: "404",
+    });
+});
+
+if (process.argv[2] != '-t') {
+    // Get the relevant information from the files so that https can be achieved.
+    const privateKey = fs.readFileSync("", "UTF-8");
+    const certificate = fs.readFileSync("", "UTF-8");
+    const ca = fs.readFileSync("", "UTF-8");
+
+    const credentials = {
+        key: privateKey,
+        cert: certificate,
+        ca: ca,
+    };
+
+    // If there is a https connection available, then redirect.
+    app.use((req, res, next) => {
+        req.secure ? next() : res.redirect("https://" + req.headers.host + req.url);
+    });
+
+    // Create http server and listen on port 80.
+    const httpServer = http.createServer(app);
+    httpServer.listen(80, () => {
+        console.log("HTTP server running on port 80");
+    });
+
+    // Create https server and listen on port 443, using credentials from above.
+    const httpsServer = https.createServer(credentials, app);
+    httpsServer.listen(443, () => {
+        console.log("HTTP server running on port 443");
+    });
+} else {
+    app.listen(8080, () => {
+        console.log("An app listening on port 8080");
+    });
+}
+
+
