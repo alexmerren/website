@@ -16,12 +16,14 @@ app.engine('.html', require('ejs').__express);
 
 // Function to send homepage when request is made.
 app.get("/", function (req, res) {
-    res.render("index");
+    res.status(200).render("index", {
+        title: "Home",
+    });
 });
 
 // Function to send the sorting visualiser page when request is made.
 app.get("/sorting", function (req, res) {
-    res.render("sorting/index");
+    res.status(200).render("sorting/index");
 });
 
 // Function to send the robots.txt (for Google) when requested.
@@ -35,8 +37,11 @@ app.get("/sitemap.xml", function (req, res) {
 });
 
 // Function to send 404 responses for inaccurate requests.
+// This has to be the last route!
 app.use(function (req, res) {
-    res.status(404).send('404')
+    res.status(404).render("404", {
+        title: "404",
+    });
 });
 
 if (process.argv[2] != '-t') {

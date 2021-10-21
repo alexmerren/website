@@ -233,3 +233,18 @@ th {
     width: auto;
     margin: 0.3em;
 }
+
+#error > * {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#error p a {
+    margin-right: 0.2em;
+}
+
+#error {
+    margin-bottom: 2em;
+}
