@@ -39,7 +39,7 @@
 
     .footer{
         flex-direction: column;
-        margin: 0;
+        margin-bottom: 2em;
     }
 
     .footer__column {

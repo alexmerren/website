@@ -23,7 +23,7 @@ hr {
     color: white;
     overflow: show;
     width: 80%;
-    margin: 4em auto;
+    margin: 3em auto;
 }
 
 .content a,
@@ -160,6 +160,7 @@ b {
     text-align: left;
     border-collapse: collapse;
     align-self: center;
+    margin: 0 -20%;
 }
 
 .repos tbody a {
