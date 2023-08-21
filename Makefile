@@ -1,6 +1,6 @@
 HUGO ?= hugo
-WEBSITE_DIR := $(CURDIR)/alexmerren
-POSTS_DIR := $(CURDIR)/alexmerren/posts
+WEBSITE_DIR := $(CURDIR)
+POSTS_DIR := $(WEBSITE_DIR)/posts
 
 ## help: Print this message
 .PHONY: help
@@ -10,10 +10,10 @@ help:
 ## run: Run the hugo server in /alexmerren
 .PHONY: run
 run:
-	cd $(WEBSITE_DIR); $(HUGO) server
+	$(HUGO) server -D
 
 ## new-post: Create a new post with a given name (make new-post NAME=test)
 .PHONY: new-post
 new-post:
 	@NAME=default-post-name
-	@cd $(WEBSITE_DIR); $(HUGO) new --kind post $(POSTS_DIR)/$(NAME).md
+	$(HUGO) new --kind post $(POSTS_DIR)/$(NAME).md
