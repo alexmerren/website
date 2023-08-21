@@ -18,6 +18,6 @@ jobs:
         env:
           HUGO_VERSION: 0.88.0
           TARGET_REPO: alexmerren/website
-          TARGET_BRANCH: main
+          TARGET_BRANCH: gh-pages
           TOKEN: ${{ secrets.TOKEN }}
           CNAME: alexmerren.uk
