@@ -57,27 +57,22 @@ params:
 
   # profile-mode
   profileMode:
-    enabled: false # needs to be explicitly set
-    title: ExampleSite
-    subtitle: "This is subtitle"
-    imageUrl: "<img location>"
+    enabled: true # needs to be explicitly set
+    title: "Hi, I'm Alex \U0001F44B."
+    subtitle: "I am a Graduate Software Engineer at Wise since September 2023. I graduated from University of Exeter in BSc Computer Science and Mathematics in July 2023. Here you can find my personal blog and links to my socials."
+    imageUrl: "/resources/_gen/images/me.png"
     imageWidth: 120
     imageHeight: 120
-    imageTitle: my image
+    imageTitle: "Portrait Image of Alex Merren"
     buttons:
-      - name: Posts
-        url: posts
-      - name: Tags
-        url: tags
-
-  # home-info mode
-  homeInfoParams:
-    Title: "Hi, I'm Alex \U0001F44B."
-    Content: ""
+      - name: Blog
+        url: blog
 
   socialIcons:
     - name: github
       url: "https://github.com/alexmerren"
+    - name: linkedin
+      url: "https://linkedin.com/in/alexmerren"
     - name: instagram
       url: "https://instagram.com/alexmerren"
     - name: email
