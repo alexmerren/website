@@ -20,5 +20,4 @@ jobs:
           TARGET_REPO: alexmerren/website
           TARGET_BRANCH: main
           TOKEN: ${{ secrets.TOKEN }}
-          HUGO_ARGS: '-t academic'
           CNAME: alexmerren.uk
