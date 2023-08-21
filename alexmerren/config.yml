@@ -58,8 +58,8 @@ params:
   profileMode:
     enabled: true # needs to be explicitly set
     title: "Hi, I'm Alex \U0001F44B."
-    subtitle: "I am a Graduate Software Engineer at Wise. I graduated from University of Exeter in BSc Computer Science and Mathematics in July 2023. I am currently interested in the use of personal data for machine learning applications, such as recommendation algorithms or community detection. If you are in London and fancy a coffee, send me an email!"
-    imageUrl: "/images/me.png"
+    subtitle: "I'm a Graduate Software Engineer at [Wise](https://wise.com). I graduated from University of Exeter in BSc Computer Science and Mathematics in July 2023. I am currently interested in the use of personal data for machine learning applications, such as recommendation algorithms or community detection. If you are in London and fancy a coffee, send me an email!"
+    imageUrl: "images/me.png"
     imageWidth: 256
     imageHeight: 256
     imageTitle: "Portrait Image of Alex Merren"
@@ -109,10 +109,14 @@ params:
     keys: ["title", "permalink", "summary", "content"]
 menu:
   main:
-    - identifier: Blog 
-      name: Blog 
-      url: /blog/
-      weight: 50
+    - identifier: Blog
+      name: Blog
+      url: blog
+      weight: 2
+    - identifier: Home
+      name: Home
+      url: 
+      weight: 1
 # Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
 pygmentsUseClasses: true
 markup:
