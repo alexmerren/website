@@ -44,22 +44,21 @@ params:
   assets:
     # disableHLJS: true # to disable highlight.js
     # disableFingerprinting: true
-    favicon: "<link / abs url>"
-    favicon16x16: "<link / abs url>"
-    favicon32x32: "<link / abs url>"
-    apple_touch_icon: "<link / abs url>"
+    favicon: "/images/favicon.ico"
+    favicon16x16: "/images/favicon-16x16.png"
+    favicon32x32: "/images/favicon-32x32.png"
+    apple_touch_icon: "/images/apple-touch-icon.png"
     safari_pinned_tab: "<link / abs url>"
 
   label:
     text: "Alex Merren"
-    icon: /apple-touch-icon.png
     iconHeight: 35
 
   # profile-mode
   profileMode:
     enabled: true # needs to be explicitly set
     title: "Hi, I'm Alex \U0001F44B."
-    subtitle: "I am a Graduate Software Engineer at Wise since September 2023. I graduated from University of Exeter in BSc Computer Science and Mathematics in July 2023. Here you can find my personal blog and links to my socials."
+    subtitle: "I am a Graduate Software Engineer at Wise. I graduated from University of Exeter in BSc Computer Science and Mathematics in July 2023. I am currently interested in the use of personal data for machine learning applications, such as recommendation algorithms or community detection. If you are in London and fancy a coffee, send me an email!"
     imageUrl: "/images/me.png"
     imageWidth: 256
     imageHeight: 256
@@ -67,6 +66,8 @@ params:
     buttons:
       - name: Blog
         url: blog
+      - name: Portfolio 
+        url: "https://github.com/alexmerren?tab=repositories"
 
   socialIcons:
     - name: github
