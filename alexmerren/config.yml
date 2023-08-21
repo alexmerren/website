@@ -1,4 +1,4 @@
-baseURL: "https://examplesite.com/"
+baseURL: "https://alexmerren.uk/"
 title: Alex Merren's Website
 paginate: 5
 theme: PaperMod
@@ -60,9 +60,9 @@ params:
     enabled: true # needs to be explicitly set
     title: "Hi, I'm Alex \U0001F44B."
     subtitle: "I am a Graduate Software Engineer at Wise since September 2023. I graduated from University of Exeter in BSc Computer Science and Mathematics in July 2023. Here you can find my personal blog and links to my socials."
-    imageUrl: "/resources/_gen/images/me.png"
-    imageWidth: 120
-    imageHeight: 120
+    imageUrl: "/images/me.png"
+    imageWidth: 256
+    imageHeight: 256
     imageTitle: "Portrait Image of Alex Merren"
     buttons:
       - name: Blog
@@ -122,3 +122,10 @@ markup:
     # guessSyntax: true
     # lineNos: true
     # style: monokai
+
+module:
+  mounts:
+  - source: static
+    target: static
+  - source: images 
+    target: static/images 
