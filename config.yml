@@ -57,7 +57,7 @@ params:
   # profile-mode
   profileMode:
     enabled: true # needs to be explicitly set
-    title: "Hi, I'm Alex \U0001F44B."
+    title: "Hi, I'm Alex \U0001F44B"
     subtitle: "I'm a Graduate Software Engineer at [Wise](https://wise.com). I graduated from University of Exeter in BSc Computer Science and Mathematics in July 2023. I am currently interested in the use of personal data for machine learning applications, such as recommendation algorithms or community detection. If you are in London and fancy a coffee, send me an email!"
     imageUrl: "images/me.png"
     imageWidth: 256
