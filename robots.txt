@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://alexmerren.uk/sitemap.xml
